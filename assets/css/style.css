@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+@import 'https://raw.githubusercontent.com/h-ibaldo/Raleway_Fixed_Numerals/master/css/rawline.css';
 
 @font-face {
   font-family: 'Amstelvar';
@@ -19,8 +20,10 @@
 /* 
  font-family: "Amstelvar", serif;
  font-family: "Raleway", sans-serif;
+ font-family: 'rawline', sans-serif; 
  font-family: "Playfair Display", serif;
  font-family: "Playfair Display", serif;
+ font-family: "Old Standard TT", serif;
 */
 :root {
   --dark-grey: #393939;
@@ -51,7 +54,8 @@ html {
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  /* font-family: 'Raleway', sans-serif; */
+  font-family: 'rawline', sans-serif;
   font-size: clamp(0.88rem, calc(0.82rem + 0.24vw), 1rem);
   color: var(--dark-grey);
 }
@@ -100,9 +104,9 @@ h2 {
 h3 {
   font-family: "Raleway", sans-serif;
   line-height: 120%;
-  font-weight: 500;
+  font-weight: 600;
   font-size: clamp(0.88rem, calc(0.7rem + 0.73vw), 1.25rem);
-  letter-spacing: 3%;
+  letter-spacing: 0.03rem;
   text-transform: uppercase;
 }
 
@@ -570,7 +574,9 @@ ul.list.dark li::before {
 
 .reasons__wrapper {
   background-color: var(--white);
-
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 .reasons__row {
@@ -632,11 +638,99 @@ ul.list.dark li::before {
 
 /* ========== WHOT ========== */
 .whot__num {
-  font-family: 'Playfair Display', serif;
-  font-size: 160px;
+  font-family: "Old Standard TT", serif;
+  font-size: clamp(4.5rem, calc(2rem + 10.67vw), 10rem);
   line-height: 100%;
   font-weight: 400;
   color: var(--white);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.whot__wrapper {
+  margin-top: 50px;
+  display: flex;
+  gap: 26px;
+}
+
+.whot__item {
+  position: relative;
+  width: 33%;
+  padding-left: clamp(4.25rem, calc(2.62rem + 6.97vw), 6.63rem);
+  padding-top: 78px;
+}
+
+.whot__item:not(:last-child):after {
+  position: absolute;
+  content: '';
+  width: clamp(2.5rem, calc(-9.25rem + 19.58vw), 5.44rem);
+  height: 8px;
+  background-image: url(../img/icons/arrow-whot.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  right: -30px;
+  top: 85px;
+}
+
+.whot__item h3 {
+  max-width: 226px;
+  margin-bottom: 13px;
+}
+
+.whot__item .t16 {
+  max-width: 277px;
+}
+
+.whot .btn {
+  display: block;
+  width: max-content;
+  /* margin: 0 auto; */
+  margin-left: auto;
+  margin-right: 8%;
+  margin-top: 43px;
+}
+
+@media (max-width:1234px) {
+  .whot__item:not(:last-child):after {
+    top: 108px;
+    right: -15px;
+    width: 80px;
+  }
+}
+
+@media (max-width:920px) {
+  .whot__wrapper {
+    display: block;
+  }
+
+  .whot__item {
+    width: 400px;
+    margin: 0 auto 40px;
+    padding-top: 7px;
+  }
+
+  .whot__item:not(:last-child):after {
+    transform: rotate(90deg);
+    width: 46px;
+    left: clamp(0rem, calc(-0.23rem + 1.17vw), 0.44rem);
+    bottom: 2px;
+    top: auto;
+  }
+  .whot .btn{
+    margin-right: auto;
+  }
+}
+
+@media (max-width:442px) {
+  .whot__item, .whot .btn {
+    width: 100%;
+  }
+  .whot .btn{
+    text-align: center;
+    padding-left: 47px;
+  }
 }
 
 /* ========= FOOTER ============= */
