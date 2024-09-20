@@ -54,8 +54,8 @@ html {
 }
 
 body {
-  /* font-family: 'Raleway', sans-serif; */
-  font-family: 'rawline', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  /* font-family: 'rawline', sans-serif; */
   font-size: clamp(0.88rem, calc(0.82rem + 0.24vw), 1rem);
   color: var(--dark-grey);
 }
@@ -141,6 +141,8 @@ h6 {
 
 .section {
   padding: clamp(3.13rem, calc(2.56rem + 2.42vw), 4.38rem) 0;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .wrapper {
@@ -732,7 +734,24 @@ ul.list.dark li::before {
     padding-left: 47px;
   }
 }
-
+/* ========= QUOTE ============ */
+.quote{
+  font-family: "Amstelvar", serif;
+  color: var(--white);
+}
+.quote__text{
+  font-size: clamp(2.5rem, calc(2.07rem + 1.82vw), 3.44rem);
+  text-transform: uppercase;
+}
+.quote__text p{
+  text-indent: clamp(2.5rem, calc(-1.31rem + 16.24vw), 10.88rem);
+}
+.quote__subtext{
+  font-size: clamp(1.5rem, calc(1.33rem + 0.73vw), 1.88rem);
+  font-style: italic;
+  margin-top: 16px;
+  margin-left: clamp(3.13rem, calc(-10.06rem + 56.24vw), 32.13rem);
+}
 /* ========= FOOTER ============= */
 .footer {
   padding: 50px 0 0;
