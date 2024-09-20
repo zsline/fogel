@@ -752,6 +752,49 @@ ul.list.dark li::before {
   margin-top: 16px;
   margin-left: clamp(3.13rem, calc(-10.06rem + 56.24vw), 32.13rem);
 }
+/* ======== ADVANTAGE ============== */
+.advantage{
+  background-position: right;
+  background-size: contain;
+}
+.advantage__wrapper{
+  max-width: 585px;
+}
+.advantage h2{
+  margin-bottom: 15px;
+}
+.advantage__wrapper p{
+  margin: 15px 0;
+}
+.advantage__wrapper p:last-child{
+  margin-bottom: 40px;
+}
+@media (max-width:1020px) {
+  .advantage__wrapper{
+    max-width: 60%;
+  }
+}
+@media (max-width:920px){
+  .advantage {
+    padding-bottom: 120%;
+    background-position: bottom;
+  }
+  .advantage__wrapper{
+    max-width: 100%;
+  }
+  .advantage .btn{
+    display: block;
+    margin: 0 auto;
+    width: max-content;
+  }
+}
+@media (max-width: 442px) {
+  .advantage .btn {
+    width: 100%;
+      text-align: center;
+      padding-left: 47px;
+  }
+}
 /* ========= FOOTER ============= */
 .footer {
   padding: 50px 0 0;
