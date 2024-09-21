@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Главная</title>
 </head>
@@ -265,10 +266,10 @@
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn-blue btn-contact" href="#">УЗНАТЬ БОЛЬШЕ</a>
+                    <a class="btn btn-blue btn-contact b-btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
                 </div>
             </div>
-            <div class="quote section"
+            <div class="quote quote-first section"
                 style="background-image: url(assets/img/quote-1-bg.png); background-color: var(--blue);">
                 <div class="container">
                     <div class="quote__text">
@@ -292,7 +293,7 @@
                         <p><b>У меня за плечами более 20 лет предпринимательства и управленческого опыта и многие
                                 проблемы руководителей я знаю изнутри. </b></p>
                     </div>
-                    <a class="btn btn-blue btn-contact" href="#">Получить консультацию</a>
+                    <a class="btn btn-blue btn-contact b-btn" href="#">Получить консультацию</a>
                 </div>
             </div>
             <div class="result section" style="background-image: url(assets/img/result-bg.png);">
@@ -303,6 +304,22 @@
                             вашу. Справились другие, справитесь и вы.</p>
                     </div>
                     <div class="result__wrapper">
+                        <div class="slider-btns">
+                            <div class="slider-btn slider-btn__prev result-prev">
+                                <svg width="13" height="19" viewBox="0 0 13 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 17.5L12 9.5L1 0.999999" stroke="#C89D66" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="slider-btn slider-btn__next result-next">
+                                <svg width="13" height="19" viewBox="0 0 13 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 17.5L12 9.5L1 0.999999" stroke="#C89D66" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
                         <div class="result__slider">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide result__item">
@@ -353,7 +370,8 @@
                                 </div>
                                 <div class="swiper-slide result__item">
                                     <div class="result__inner">
-                                        <h5>Проблемы управления коллективом, неподчинение и сопротивление ключевых сотрудников.</h5>
+                                        <h5>Проблемы управления коллективом, неподчинение и сопротивление ключевых
+                                            сотрудников.</h5>
                                         <div class="result__item--name">
                                             Эльдар, совладелец и ген.директор асфальтного завода и дорожной компании
                                         </div>
@@ -374,7 +392,55 @@
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn-blue btn-contact" href="#">больше кейсов</a>
+                    <a class="btn btn-blue btn-contact b-btn" href="#">больше кейсов</a>
+                </div>
+            </div>
+            <div class="methods section" style="background-color: #DADADA;">
+                <div class="container">
+                    <div class="methods__wrapper">
+                        <div class="methods__offer">
+                            <h2>Методы работы<br>и квалификация</h2>
+                            <div class="methods__item">
+                                <h5>Краткосрочная стратегическая терапия</h5>
+                                <p>Четкие и понятные протоколы работы позволяют решить большинство психологических
+                                    проблем, с которыми работает метод, за небольшое количество сессий.</p>
+                            </div>
+                            <div class="methods__item">
+                                <h5>Терапевтический транс</h5>
+                                <p>Разработанная гениальным Милтоном Эриксоном модель терапии, позволяющая получить
+                                    доступ к скрытым (не задействованным) ресурсам психики и опыта самого человека и
+                                    направить эти ресурсы на решение практически любых проблем.</p>
+                            </div>
+                            <div class="methods__item">
+                                <h5>ДПДГ / EMDR - терапия</h5>
+                                <p>С помощью движения глаз по специальным протоколам активизируются те участки мозга,
+                                    которые отвечают за переработку негативной информации и воспоминаний о
+                                    травматическом опыте прошлого.</p>
+                            </div>
+                            <div class="methods__item">
+                                <h5>Проективные методы</h5>
+                                <p>Применяется в ситуациях, когда нет очевидных логических решений, когда нужно получить
+                                    инсайт, обратиться к собственной внутренней мудрости.</p>
+                            </div>
+                            <a class="btn btn-blue btn-contact b-btn" href="#">Узнать подробнее о методах и опыте</a>
+                        </div>
+                        <div class="methods__img">
+                            <img src="assets/img/methods.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="quote quote-second section" style="background-color: var(--blue); background-image: url(assets/img/quote-2-bg.png);">
+                <div class="container">
+                    <div class="quote__subtext">
+                        После работы с психологом человек должен уметь
+                    </div>
+                    <div class="quote__text">
+                        САМОСТОЯТЕЛЬНО и БОЛЕЕ УСПЕШНО <i>действовать</i>
+                    </div>
+                    <div class="quote__subtext">
+                        в тех ситуациях, в которых<br> раньше испытывал трудности.
+                    </div>
                 </div>
             </div>
         </main>
@@ -419,6 +485,7 @@
             </div>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 

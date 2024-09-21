@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
-@import 'https://raw.githubusercontent.com/h-ibaldo/Raleway_Fixed_Numerals/master/css/rawline.css';
+@import url('https://raw.githubusercontent.com/h-ibaldo/Raleway_Fixed_Numerals/master/css/rawline.css');
 
 @font-face {
   font-family: 'Amstelvar';
@@ -177,6 +177,43 @@ nav ul a {
   font-weight: 700;
   opacity: 1;
   transition: all 0.3s;
+}
+
+.slider-btns {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slider-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.slider-btn__prev {
+  transform: translateX(-20px);
+}
+
+.slider-btn__next {
+  transform: translateX(20px);
+}
+
+.slider-btn__prev svg {
+  transform: rotate(180deg);
+}
+
+.swiper-button-disabled {
+  visibility: hidden;
 }
 
 /* ============ BUTTONS ================== */
@@ -753,21 +790,41 @@ ul.list.dark li::before {
 }
 
 .quote__text {
-  font-size: clamp(2.5rem, calc(2.07rem + 1.82vw), 3.44rem);
+  font-size: clamp(1.5rem, calc(0.8rem + 3.52vw), 3.44rem);
   text-transform: uppercase;
 }
 
-.quote__text p {
+.quote-first .quote__text p {
   text-indent: clamp(2.5rem, calc(-1.31rem + 16.24vw), 10.88rem);
 }
 
 .quote__subtext {
   font-size: clamp(1.5rem, calc(1.33rem + 0.73vw), 1.88rem);
   font-style: italic;
-  margin-top: 16px;
-  margin-left: clamp(3.13rem, calc(-10.06rem + 56.24vw), 32.13rem);
+  margin: 16px 0;
+
 }
 
+.quote__subtext {
+  margin-left: clamp(3.13rem, calc(-10.06rem + 56.24vw), 32.13rem);
+}
+.quote__subtext:last-child{
+  margin-bottom: 0;
+}
+
+.quote-second .quote__text {
+  max-width: 848px;
+  margin: 0 auto;
+}
+.quote-second .quote__subtext:first-child {
+  max-width: 848px;
+  margin: 0 auto 18px;
+}
+@media (max-width:420px) {
+  .quote-second .quote__subtext:first-child{
+    margin-left: clamp(3.13rem, calc(-10.06rem + 56.24vw), 32.13rem);
+  }
+}
 /* ======== ADVANTAGE ============== */
 .advantage {
   background-position: right;
@@ -830,31 +887,43 @@ ul.list.dark li::before {
 .result__title p {
   margin-top: 20px;
 }
-.swiper-wrapper{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+
+.result__wrapper {
+  position: relative;
 }
-.result__inner{
+
+.result__slider {
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.result__inner {
   box-sizing: border-box;
   height: calc(100% - 34px);
   padding: 40px 30px;
   background-color: var(--white);
 }
-.result__item{
-  min-width: 335px;
-  height: 100%;
+
+.result__item {
+  height: auto;
+  box-sizing: border-box;
   -webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.1);
 }
-.result__item h5{
+
+.result__item h5 {
   margin-bottom: 20px;
 }
-.result__item p{
+
+.result__item p {
   margin-bottom: 16px;
 }
-.result__item--name{
+
+.result__item--name {
   position: relative;
   font-size: 12px;
   text-transform: uppercase;
@@ -863,7 +932,8 @@ ul.list.dark li::before {
   margin-bottom: 30px;
   padding-top: 20px;
 }
-.result__item--name::after{
+
+.result__item--name::after {
   position: absolute;
   content: '';
   width: 50px;
@@ -872,7 +942,8 @@ ul.list.dark li::before {
   top: 0;
   left: 0;
 }
-.result__item--bottom{
+
+.result__item--bottom {
   background-color: var(--gold);
   color: var(--white);
   font-size: 12px;
@@ -895,6 +966,74 @@ ul.list.dark li::before {
     width: 100%;
     text-align: center;
     padding-left: 47px;
+  }
+
+  .result .btn-blue::after {
+    display: none;
+  }
+}
+
+/* ============== METHODS =========== */
+.methods h2 {
+  margin-bottom: 30px;
+}
+
+.methods__wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.methods__offer,
+.methods__img {
+  width: 49%;
+}
+
+.methods__img {
+  transform: translateX(22px);
+}
+
+.methods__img img {
+  width: 100%;
+}
+
+.methods__item {
+  margin-bottom: 20px;
+}
+
+.methods__item h5 {
+  margin-bottom: 10px;
+}
+
+.methods .btn {
+  margin-top: 10px;
+}
+
+@media (max-width: 920px) {
+  .methods__wrapper {
+    flex-direction: column;
+  }
+
+  .methods__offer,
+  .methods__img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 442px) {
+  .methods .btn-blue {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .methods .btn-blue::after {
+    display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .methods .btn-blue {
+    font-size: 10px;
   }
 }
 
@@ -1101,5 +1240,21 @@ ul.list.dark li::before {
 
   .footer__copy {
     text-align: left;
+  }
+}
+
+@media (max-width: 920px) {
+  .b-btn {
+    display: block;
+    margin: 0 auto;
+    width: max-content;
+  }
+}
+
+@media (max-width: 442px) {
+  .advantage .btn {
+    width: 100%;
+    text-align: center;
+    padding-left: 47px;
   }
 }
