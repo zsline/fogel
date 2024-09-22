@@ -22,3 +22,9 @@ new Swiper('.result__slider', {
         }
       }
 });
+new Swiper('.reviews__slider',{
+  navigation: {
+    nextEl: '.reviews-next',
+    prevEl: '.reviews-prev',
+  },
+});

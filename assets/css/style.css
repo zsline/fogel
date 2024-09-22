@@ -200,13 +200,7 @@ nav ul a {
   cursor: pointer;
 }
 
-.slider-btn__prev {
-  transform: translateX(-20px);
-}
 
-.slider-btn__next {
-  transform: translateX(20px);
-}
 
 .slider-btn__prev svg {
   transform: rotate(180deg);
@@ -960,7 +954,13 @@ ul.list.dark li::before {
   margin-right: auto;
   margin-top: 43px;
 }
+.result-prev {
+  transform: translateX(-20px);
+}
 
+.result-next {
+  transform: translateX(20px);
+}
 @media (max-width: 442px) {
   .result .btn {
     width: 100%;
@@ -1036,7 +1036,105 @@ ul.list.dark li::before {
     font-size: 10px;
   }
 }
-
+/* =========== REVIEWS =========== */
+.reviews{
+  position: relative;
+  display: block;
+}
+.reviews .container{
+  position: relative;
+}
+.reviews__dec{
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: clamp(10.63rem, calc(8.07rem + 10.91vw), 16.25rem);
+  height: clamp(8.81rem, calc(6.68rem + 9.09vw), 13.5rem);
+  z-index: 1;
+}
+.reviews__wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+.reviews__offer{
+  position: relative;
+  display: inline-block;
+  width: 40%;
+  z-index: 2;
+}
+.reviews__offer h2{
+  margin-bottom: 30px;
+  padding-top: 24px;
+}
+.reviews__offer p{
+  max-width: 288px;
+}
+.reviews__inner{
+  display: inline-block;
+  position: relative;
+  width: 60%;
+  max-width: 541px;
+  margin: 0 auto;
+}
+.reviews__slider{
+  overflow: hidden;
+}
+.reviews__slide--title{
+  margin-bottom: 30px;
+}
+.reviews__slider--btns{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  bottom: 40%;
+  left: 0;
+  z-index: 10;
+}
+.reviews-prev{
+  transform: translateX(-70px);
+}
+.reviews-next{
+  transform: translateX(70px);
+}
+@media (max-width:1120px) {
+  .reviews-prev{
+    transform: translateX(-20px);
+  }
+  .reviews-next{
+    transform: translateX(20px);
+  }
+}
+@media (max-width:820px) {
+  .reviews__wrapper{
+    flex-direction: column;
+    gap: 50px;
+  }
+  .reviews__offer{
+    width: 100%;
+  }
+  .reviews__dec{
+    right: 0;
+    left: auto;
+  }
+  .reviews__slide{
+    overflow: hidden;
+  }
+  .reviews__dec img, .reviews__slide img{
+    width: 100%;
+    object-fit: contain;
+  }
+  .reviews__slide--img{
+    overflow: hidden;
+    min-height: 366px;
+  }
+  .reviews__slide img{
+    transform: scale(1.4) translateY(40px);
+  }
+  .reviews__inner{
+    width: 100%;
+  }
+}
 /* ========= FOOTER ============= */
 .footer {
   padding: 50px 0 0;
