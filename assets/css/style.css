@@ -58,6 +58,7 @@ body {
   /* font-family: 'rawline', sans-serif; */
   font-size: clamp(0.88rem, calc(0.82rem + 0.24vw), 1rem);
   color: var(--dark-grey);
+  overflow-x: hidden;
 }
 
 body.noscroll {

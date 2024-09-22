@@ -10,11 +10,10 @@ document.querySelector('.menu-btn').addEventListener('click', function(){
 const faqItems = document.querySelectorAll('.faq__item');
 faqItems.forEach(el =>{
   el.firstElementChild.addEventListener('click', function() {
-    console.dir(el);
     faqItems.forEach(item =>{
       item.classList.remove('open');
-    })
-    el.classList.add('open');
+    });
+  el.classList.add('open')
   });
 });
 
