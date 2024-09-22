@@ -3,6 +3,23 @@ document.querySelector('.menu-btn').addEventListener('click', function(){
     document.querySelector('.nav').classList.toggle('open');
     document.querySelector('body').classList.toggle('noscroll');
 });
+
+
+// =============== FAQ ==================
+
+const faqItems = document.querySelectorAll('.faq__item');
+faqItems.forEach(el =>{
+  el.firstElementChild.addEventListener('click', function() {
+    console.dir(el);
+    faqItems.forEach(item =>{
+      item.classList.remove('open');
+    })
+    el.classList.add('open');
+  });
+});
+
+
+// ================= SLIDERS ==============
 new Swiper('.result__slider', {
     slidesPerView: 3,
     spaceBetween: 30,
