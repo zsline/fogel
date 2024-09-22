@@ -92,6 +92,7 @@ h1 {
   line-height: 110%;
   font-size: clamp(2rem, calc(1.35rem + 2.79vw), 3.44rem);
   text-transform: uppercase;
+  font-weight: 500;
 }
 
 h2 {
@@ -480,7 +481,7 @@ ul.list.dark li::before {
 /* ================ HERO ================ */
 .hero {
   overflow: hidden;
-
+  background-repeat: no-repeat;
 }
 
 /* ================ HERO-HOME ================ */
@@ -547,9 +548,48 @@ ul.list.dark li::before {
   margin-top: 14px;
 }
 
-
-
+.main-page .hero{
+  background-color: var(--light-grey-2);
+  min-height: 400px;
+  background-size: cover;
+  padding-top: 73px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-page .hero h1{
+  max-width: 832px;
+  /* margin: clamp(3.13rem, calc(2.56rem + 2.42vw), 4.38rem) auto clamp(1.25rem, calc(0.97rem + 1.21vw), 1.88rem); */
+  margin: 0 auto;
+  text-align: center;
+}
+.main-page .hero p{
+  max-width: 644px;
+  margin: 0 auto;
+  text-align: center;
+}
+.hero-methods{
+  background-position: center;
+}
+.hero-methods h1{
+  color: var(--white);
+}
+@media (max-width:896px){
+  body.noscroll .header {
+    padding: 8px 0px 8px 0;
+}
+body.noscroll{
+  margin-right: 0px;
+}
+}
 @media (orientation: portrait) {
+  body.noscroll{
+    margin-right: 0px;
+  }
+  body.noscroll .header {
+    padding: 8px 0px 8px 0;
+}
   .hero-home {
     padding-bottom: 60%;
   }
@@ -560,7 +600,7 @@ ul.list.dark li::before {
 
   .hero-home__wrapper {
     width: 100%;
-    margin-top: 130px;
+    margin-top: 110px;
     display: inline-block;
   }
 
@@ -581,6 +621,12 @@ ul.list.dark li::before {
     object-fit: contain;
     object-position: bottom;
     transform: translateX(0);
+  }
+  .main-page .hero{
+    padding-top: 40px;
+  }
+  .hero-methods{
+    background-position: left bottom;
   }
 }
 
