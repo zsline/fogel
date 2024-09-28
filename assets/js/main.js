@@ -53,4 +53,56 @@ if (document.querySelector('.reviews__slider')) {
     },
   });
 }
+if (document.querySelector('.documents__slider-thumbs')) {
+  new Swiper('.documents__slider-thumbs', {
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.documents-next',
+      prevEl: '.documents-prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      415: {
+        slidesPerView: 2,
+      },
+      647: {
+        slidesPerView: 3,
+      },
+      960: {
+        slidesPerView: 4,
+      }
+    }
+  });
+}
+if (document.querySelector('.documents__slider')) {
+  new Swiper('.documents__slider', {
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.documents-next',
+      prevEl: '.documents-prev',
+    },
+    thumbs: {
+      swiper: '.documents__slider-thumbs',
+    }
+  });
+}
+
+
+const docSlider = document.querySelector('.documents__wrapper');
+const docItems = document.querySelectorAll('.documents-thumbs__item');
+if(docItems.length > 0){
+  docItems.forEach(el => {
+    el.addEventListener('click', function () {
+      docSlider.classList.add('fullscreen');
+      document.querySelector('body').classList.add('noscroll');
+    })
+  });
+  document.querySelector('.documents__slider--close').addEventListener('click', function(){
+    docSlider.classList.remove('fullscreen');
+    document.querySelector('body').classList.remove('noscroll');
+  })
+}
+
 
