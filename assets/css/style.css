@@ -101,7 +101,7 @@ h2 {
   line-height: 110%;
   font-size: clamp(1.5rem, calc(0.82rem + 2.91vw), 3rem);
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: clamp(1.25rem, calc(0.98rem + 1.16vw), 1.88rem);
 }
 
@@ -126,6 +126,7 @@ h5 {
   line-height: 110%;
   font-weight: 600;
   font-size: clamp(1.13rem, calc(1.07rem + 0.24vw), 1.25rem);
+  margin-bottom: 20px;
 }
 
 h6 {
@@ -2166,6 +2167,54 @@ ul.list.dark li::before {
   text-indent: 2rem;
   }
 }
+/* ============= sign-up ===================== */
+.sign-up h2, .sign-up h5{
+  color: var(--white);
+}
+.sign-up h2{
+  text-align: center;
+}
+.sign-up__cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: clamp(2.5rem, calc(1.96rem + 2.31vw), 3.75rem);
+}
+.sign-up__card h5{
+  color: var(--blue);
+}
+.sign-up__card{
+  background-color: var(--white);
+  padding: 30px 20px 30px 30px;
+}
+.sign-up__wrapper{
+  margin-top: clamp(2.5rem, calc(1.69rem + 3.47vw), 4.38rem);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+}
+.sign-up__wrapper h2{
+  text-align: left;
+  max-width: 600px;
+}
+.sign-up__wrapper--offer{
+  max-width: 482px;
+}
+.sign-up__wrapper--offer ul{
+  margin-bottom: 30px;
+}
+@media (max-width:824px) {
+  .sign-up__cards{
+    display: block;
+  }
+  .sign-up__card:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .sign-up__wrapper{
+    display: block;
+  }
+}
+
 /* ========= FOOTER ============= */
 .footer {
   padding: 50px 0 0;
