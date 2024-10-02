@@ -481,7 +481,10 @@ ul.list.dark li::before {
 .wrapper-block__item {
   margin-bottom: clamp(1.88rem, calc(1.31rem + 2.42vw), 3.13rem);
 }
-
+.wrapper-block__item a{
+  color: var(--gold);
+  text-decoration: underline;
+}
 @media (max-width:1200px) {
   .wrapper-block-as {
     grid-template-columns: 40% auto;
@@ -498,7 +501,8 @@ ul.list.dark li::before {
   }
 
   .wrapper-block {
-    display: block;
+    display: inline-block;
+    padding-bottom: 30px;
   }
 
   .wrapper-row-as {
