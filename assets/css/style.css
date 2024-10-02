@@ -119,6 +119,7 @@ h4 {
   line-height: 110%;
   font-weight: 500;
   font-size: clamp(1.63rem, calc(1.45rem + 0.73vw), 2rem);
+  margin-bottom: 20px;
 }
 
 h5 {
@@ -228,6 +229,7 @@ nav ul a {
 .btn {
   display: inline-block;
   text-transform: uppercase;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.03em;
   padding: 10px 20px;
@@ -2258,6 +2260,69 @@ ul.list.dark li::before {
   background: linear-gradient(0deg, rgba(35,22,5,0) 66%, rgba(35,22,5,1) 100%);
   opacity: 0.4;
 }
+/* ============= BLOG PAGE ============== */
+.hero-blog{
+  background-size: contain;
+  background-position: bottom right;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.hero-blog__wrapper{
+  padding-top: clamp(4.38rem, calc(1.75rem + 11.21vw), 10.44rem);
+  max-width: 604px;
+}
+.hero-blog__wrapper h2, .hero-blog__wrapper h3{
+  color: var(--white);
+}
+.hero-blog__wrapper .btn{
+  margin-top: 30px;
+}
+.blog{
+  background-color: var(--light-grey-1);
+}
+.blog.section{
+  overflow: visible;
+}
+.blog__wrapper{
+  display: grid;
+  grid-template-columns: auto 358px;
+  gap: 50px;
+}
+.blog__content{
+  max-width: 789px;
+}
+.blog__content--item{
+  background-color: var(--white);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+.blog__sidebar{
+  height: 100%;
+}
+.blog__sidebar--wrapper{
+	position: -webkit-sticky;
+	position: sticky;
+	top: 20px;
+}
+.blog__sidebar--item{
+  padding: 45px 30px;
+}
+
+@media (max-width:974px) {
+  .hero-blog{
+    background-image: none !important;
+  }
+  .hero-blog__wrapper{
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+@media (max-width:780px) {
+  .blog__wrapper{
+    display: block;
+  }
+}
 /* ========= FOOTER ============= */
 .footer {
   padding: 50px 0 0;
@@ -2483,7 +2548,26 @@ ul.list.dark li::before {
     display: none;
   }
 }
-
+/* ======== SIDEBAR ================ */
+.poster-subscribe{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.poster-subscribe__title {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  line-height: 100%;
+  margin-bottom: 20px;
+}
+.poster-subscribe__text {
+  font-family: "Amstelvar", serif;
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 14px;
+}
+.poster-subscribe__subtext {
+  margin-bottom: 30px;
+}
 * {
   /* outline:1px solid #000; */
 }
