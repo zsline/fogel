@@ -239,7 +239,7 @@ nav ul a {
 
 .btn-contact {
   position: relative;
-  padding: 10px 47px 10px 20px;
+  padding: 10px 20px;
 }
 
 .btn-contact.btn-white {
@@ -257,7 +257,7 @@ nav ul a {
   color: var(--white);
 }
 
-.btn-contact.btn-white::after {
+.btn-contact.btn-white p::after {
   position: absolute;
   content: '';
   width: 20px !important;
@@ -265,13 +265,18 @@ nav ul a {
   background-image: url(../img/icons/tg-gold.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  right: 20px;
+  right: 0px;
   top: 50%;
   transform: translateY(-50%);
 }
-
-.btn-blue::after,
-.btn-contact.btn-gold::after {
+.btn-contact p{
+  position: relative;
+  padding-right: 30px;
+  width: max-content;
+  margin: 0 auto !important;
+}
+.btn-contact.btn-blue p::after,
+.btn-contact.btn-gold p::after {
   position: absolute;
   content: '';
   width: 20px !important;
@@ -279,7 +284,7 @@ nav ul a {
   background-image: url(../img/icons/tg-white.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  right: 20px;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
 }
