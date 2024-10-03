@@ -591,13 +591,13 @@ ul.list.dark li::before {
 
 .header__wrapper nav {
   display: flex;
+  align-items: center;
   margin-left: auto;
   gap: clamp(3.38rem, calc(-3.22rem + 13.18vw), 7rem);
 }
 
 .header__wrapper nav ul {
   display: flex;
-  align-items: center;
   gap: 23px;
 }
 
@@ -712,6 +712,7 @@ ul.list.dark li::before {
   transform: translateY(-50%);
 }
 
+
 @media (max-width: 974px) {
   .header {
     position: fixed;
@@ -719,9 +720,42 @@ ul.list.dark li::before {
     height: 40px;
     background-color: var(--white);
   }
+  .nav {
+    position: absolute;
+    flex-direction: column;
+    padding: 50px 20px;
+    width: calc(100vw + 15px);
+    height: 100vh;
+    background-color: var(--light-grey-1);
+    top: 55px;
+    right: 0;
+    transform: translateX(100%);
+    transition: all 0.3s;
+    visibility: hidden;
+  }
+  .nav.open {
+    display: flex;
+    align-items: start;
+    visibility: visible;
+    transform: translateX(15px);
+  }
 
-  .header__wrapper nav {
-    display: none;
+  .nav ul {
+    flex-direction: column;
+    color: var(--blue);
+  }
+  .nav ul a{
+    font-size: 22px;
+  }
+  .nav ul a::after{
+    background-color: var(--blue);
+    bottom: -4px;
+    height: 2px;
+  }
+
+  .nav.open .header__btn.contact-btn {
+    display: inline;
+    width: max-content;
   }
 
   body.noscroll .header {
