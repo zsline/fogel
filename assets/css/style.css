@@ -236,7 +236,9 @@ nav ul a {
   transition: all 0.3s;
   outline: none;
 }
-
+.btn p{
+  margin: 0 !important;
+}
 .btn-contact {
   position: relative;
   padding: 10px 20px;
@@ -716,44 +718,45 @@ ul.list.dark li::before {
 @media (max-width: 974px) {
   .header {
     position: fixed;
+    width: 100%;
     padding: 8px 0;
     height: 40px;
     background-color: var(--white);
   }
-  .nav {
+  .header .nav {
     position: absolute;
     flex-direction: column;
     padding: 50px 20px;
     width: calc(100vw + 15px);
     height: 100vh;
     background-color: var(--light-grey-1);
-    top: 55px;
+    top: 32px;
     right: 0;
     transform: translateX(100%);
     transition: all 0.3s;
     visibility: hidden;
   }
-  .nav.open {
+  .header .nav.open {
     display: flex;
     align-items: start;
     visibility: visible;
     transform: translateX(15px);
   }
 
-  .nav ul {
+  .header .nav ul {
     flex-direction: column;
     color: var(--blue);
   }
-  .nav ul a{
+  .header .nav ul a{
     font-size: 22px;
   }
-  .nav ul a::after{
+  .header .nav ul a::after{
     background-color: var(--blue);
     bottom: -4px;
     height: 2px;
   }
 
-  .nav.open .header__btn.contact-btn {
+  .header .nav.open .header__btn.contact-btn {
     display: inline;
     width: max-content;
   }
@@ -2472,7 +2475,7 @@ ul.list.dark li::before {
 }
 
 .hero-blog__wrapper {
-  padding-top: clamp(4.38rem, calc(1.75rem + 11.21vw), 10.44rem);
+  padding-top: clamp(1.25rem, calc(-2.73rem + 16.99vw), 10.44rem);
   max-width: 604px;
 }
 
