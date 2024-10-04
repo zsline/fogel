@@ -2593,6 +2593,12 @@ ul.list.dark li::before {
     display: block;
   }
 }
+@media (max-width:640px) {
+  .blog__content--item{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 
 /* ============= SINGLE ================ */
 
