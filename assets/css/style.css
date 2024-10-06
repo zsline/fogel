@@ -230,6 +230,36 @@ nav ul a {
   object-fit: cover;
 }
 
+.fogel-subscription{
+  display: block;
+  position: fixed;
+  padding: 30px 90px 30px 30px;
+  background-color: var(--white);
+  bottom: 20%;
+  right: 0;
+  transform: translateX(100%);
+  z-index: 999;
+  transition: all 0.5s;
+}
+.fogel-subscription__wrapper{
+  max-width: 290px;
+}
+.fogel-subscription__title{
+  color: var(--blue);
+  font-size: 20px;
+  margin-bottom: 11px;
+  font-weight: 600;
+}
+.fogel-subscription__text p{
+  margin-bottom: 11px;
+  font-size: 16px;
+}
+.fogel-subscription__close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
 /* ============ BUTTONS ================== */
 .btn {
   display: inline-block;

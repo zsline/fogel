@@ -3,11 +3,21 @@ document.querySelector('.menu-btn').addEventListener('click', function () {
   document.querySelector('.nav').classList.toggle('open');
   document.querySelector('body').classList.toggle('noscroll');
 });
+const fClose = document.querySelector('.fogel-subscription__close');
+const fSub = document.querySelector('.fogel-subscription');
+window.addEventListener('scroll', function() {
+  if(pageYOffset > 100){
+    fSub.style.transform = 'translateX(0)';
+  }
+});
 
-// const experienceImage = document.querySelector('.experience__images');
-// const experience = document.querySelector('.experience');
-// experience.style.minHeight = experienceImage.scrollHeight + 'px';
-// experience.querySelector('.experience__wrapper').style.paddingLeft = experienceImage.scrollWidth + 'px';
+fClose.addEventListener('click', () => {
+  fSub.style.transform = 'translateX(100%)';
+  setTimeout(closeSub, 500) ;
+});
+function closeSub() {
+  fSub.style.display = 'none'
+}
 
 
 // =============== FAQ ==================
