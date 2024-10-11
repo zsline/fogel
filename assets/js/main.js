@@ -5,19 +5,22 @@ document.querySelector('.menu-btn').addEventListener('click', function () {
 });
 const fClose = document.querySelector('.fogel-subscription__close');
 const fSub = document.querySelector('.fogel-subscription');
-window.addEventListener('scroll', function() {
-  if(pageYOffset > 100){
-    fSub.style.transform = 'translateX(0)';
-  }
-});
+if (fSub) {
+  window.addEventListener('scroll', function () {
+    if (pageYOffset > 100) {
+      fSub.style.transform = 'translateX(0)';
+    }
+  });
 
-fClose.addEventListener('click', () => {
-  fSub.style.transform = 'translateX(100%)';
-  setTimeout(closeSub, 500) ;
-});
-function closeSub() {
-  fSub.style.display = 'none'
+  fClose.addEventListener('click', () => {
+    fSub.style.transform = 'translateX(100%)';
+    setTimeout(closeSub, 500);
+  });
+  function closeSub() {
+    fSub.style.display = 'none'
+  }
 }
+
 
 
 // =============== FAQ ==================
@@ -102,14 +105,14 @@ if (document.querySelector('.documents__slider')) {
 
 const docSlider = document.querySelector('.documents__wrapper');
 const docItems = document.querySelectorAll('.documents-thumbs__item');
-if(docItems.length > 0){
+if (docItems.length > 0) {
   docItems.forEach(el => {
     el.addEventListener('click', function () {
       docSlider.classList.add('fullscreen');
       document.querySelector('body').classList.add('noscroll');
     })
   });
-  document.querySelector('.documents__slider--close').addEventListener('click', function(){
+  document.querySelector('.documents__slider--close').addEventListener('click', function () {
     docSlider.classList.remove('fullscreen');
     document.querySelector('body').classList.remove('noscroll');
   })

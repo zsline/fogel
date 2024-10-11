@@ -44,6 +44,46 @@
             </div>
         </header>
         <main class="main">
+            <style>
+                .reasons {
+                    background-image: url(assets/img/bg-main.jpg);
+                    background-color: #fff;
+                }
+
+                .quote-first {
+                    background-image: url(assets/img/quote-1-bg.jpg);
+                    background-color: #112444;
+                }
+
+                .quote-second {
+                    background-image: url(assets/img/quote-2-bg.jpg);
+                    background-color: #112444;
+                }
+
+                .result {
+                    background-image: url(assets/img/bg-main.jpg);
+                    background-color: #F9F9F9;
+                }
+
+                @media (max-width:394px) {
+                    .reasons {
+                        background-image: url(assets/img/bg-main-mobile.png);
+                        background-size: contain;
+                    }
+
+                    .quote-first {
+                        background-image: url(assets/img/quote-1-bg-mobile.png);
+                    }
+
+                    .quote-second {
+                        background-image: url(assets/img/quote-2-bg-mobile.png);
+                    }
+
+                    .result {
+                        background-image: url(assets/img/result-bg-mobile.png);
+                    }
+                }
+            </style>
             <div class="hero hero-home" style="background-color: #676A6A;">
                 <div class="hero-home__blur"></div>
                 <picture>
@@ -86,8 +126,7 @@
                     </div>
                 </div>
             </div>
-            <div class="reasons section"
-                style="background-color: var(--light-grey-1); background-image: url(assets/img/bg-main.jpg);">
+            <div class="reasons section">
                 <div class="container">
                     <h2>С чем обращаются<br> к бизнес-психологу</h2>
                     <div class="reasons__wrapper">
@@ -274,8 +313,7 @@
                     </a>
                 </div>
             </div>
-            <div class="quote quote-first section"
-                style="background-image: url(assets/img/quote-1-bg.png); background-color: var(--blue);">
+            <div class="quote quote-first section">
                 <div class="container">
                     <div class="quote__text">
                         <p><i>Хорошая жизнь</i> – результат<br> осознанного выбора.</p>
@@ -303,7 +341,7 @@
                     </a>
                 </div>
             </div>
-            <div class="result section" style="background-image: url(assets/img/result-bg.png);">
+            <div class="result section">
                 <div class="container">
                     <div class="result__title t-c">
                         <h2>Результаты</h2>
@@ -527,7 +565,7 @@
             <div class="subscription section"
                 style="background-color:var(--white); background-image: url(assets/img/subscription.jpg);">
                 <div class="container">
-                    <h2>СТАНЬТЕ ЧАСТЬЮ КОМЬюНИТИ</h2>
+                    <h2>СТАНЬТЕ ЧАСТЬЮ <i>КОМЬюНИТИ</i></h2>
                     <div class="subscription__wrapper">
                         <div class="quote__subtext">
                             Я регулярно пишу полезности для руководителей на тему управления и психологического здоровья
